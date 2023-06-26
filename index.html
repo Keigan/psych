@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<meta name="Author" content="DATADISCRETE LLC">
+<meta roll-credits="TUNE INTO PSYCHEDLIC RESEARCH CLUB AT ANY TIME OF DAY FOR A NEVER-ENDING ARRAY OF ECLECTIC TRACKS.">
+<meta name="Keywords" content="friends, sound, unite, transform, machine, transmute, jukebox, chill, euphoria, perception, player, trippy">
+<meta charset="UTF-8">
+<title>PSYCHEDELIC RESEARCH CLUB</title>
+	
+<style>
+/*	Insert STYLE here*/
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	}
+	body{
+		background-color: black;
+	}
+	h1 {
+		font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+	}
+	a{
+		color: White;
+	}
+	.home_img{
+		max-width: 75vw;
+		object-fit: fill;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	section{
+		width: 100vw;
+		float: left;
+		height: 100vh;
+		position: relative;
+		display: inline-block;
+
+	}	
+	.home_background_img {
+		object-fit: cover;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 30%;
+	}
+	.join_background_img{
+		object-fit: cover;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 30%;
+	}
+	video {
+		object-fit: cover;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.segment_one{
+		background: black;
+		
+	}
+	.segment_two{
+		background: black;
+
+	}
+	.segment_three{
+		background: black;
+		height: 100vh;
+	}
+	.listen_button_div{
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.listen_button{
+		scroll-behavior: smooth;
+		font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+		background-color: transparent;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
+	.radio_player{
+		width: 100vw;
+		margin: 0 auto;
+		opacity: 60%;
+		
+	}
+	.radio_position{
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+	}
+	.discord_div{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 60%;
+	}
+	footer{
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		top: 100vh;
+		width: 100vw;
+		font-size: 1vw;
+	}
+	ul {
+		text-align: center;
+    	margin-left: auto;
+    	margin-right: auto;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: black;
+		opacity: 80%;
+	}
+
+	li {
+		display:inline-block;
+	}
+
+	li p {
+		display: inline-block;
+		color: white;
+		padding: .5vw .5vh;
+		text-decoration: none;
+	}
+	
+</style>	
+</head>
+	
+<!--Insert HTML here-->
+<body>
+	
+		<section class="segment_one">
+			<img class="home_background_img" id="home_bg" src="./" alt="home_page_img">
+			<center><img class="home_img" src="./logo.png" alt="header_img"></center>
+			<div class="listen_button_div"><button class="listen_button"><a href="#listen">LISTEN NOW</a></button></div>
+		</section>
+		
+		<section class="segment_two" id="listen">
+	
+			<video id="visualizerVideo" playsinline="" autoplay="" muted="" loop=""><source id="visualizerSource" src="./playerdeck/Microscopy 1.mp4" type="video/mp4"></video>
+			<center><div class="radio_position"><div class="radio_player"><script src="https://embed.radio.co/player/9ad6185.js"></script></div></div></center>
+			
+			<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer> new Crate({ server: '826888383430131713', channel: '826888383909462138', })</script>
+		</section>
+		
+		<section class="segment_three">
+			<img class="join_background_img" id="join_bg" src="./" alt="join_img">
+			<div class="discord_div"><widgetbot server="826888383430131713" channel="826888383909462138" width="80vw" height="80vh"></widgetbot><script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script></div>
+			
+		<footer>
+			<ul class="footer">
+				<li style="float: right;"><p><a href="https://www.instagram.com/guenth_/">PHOTOGRAPHY BY NATE GUENTHER</a></p></li>
+				<li style=""><p>&copy; PSYCHEDELIC RESEARCH CLUB</p></li>
+				<li style="float: left;"><p><a href="https://www.datadiscrete.com">DESIGNED BY DATADISCRETE (V 3.0.0)</a></p></li>
+			</ul>
+		</footer>
+		</section>
+
+<script type="text/javascript">
+	//	Insert JAVASCRIPT here
+
+	var deck = new Array();
+	var backgrounds = new Array();
+	const deckDir = "./playerdeck/";	
+	const backgroundDir = "./backgrounds/";
+	var visualizerDiv = document.getElementById('listen');
+	var visualizerSauce = document.getElementById('visualizerVideo');
+	var visualizerCounter = 0;
+	
+	
+	// There is a python script that will create these arrays (deck and backgrounds) based on the standard V3.0.0 file naming structure. Per project requirements must merge branded visualizers evenly amoungst non branded visualizers. Avoid branded visualizers as first placement due to design requirements.
+	deck = ['RGB Separation Wave.mp4', 'Rainbow Wave 4.mp4', 'Honeycomb 3.mp4', 'Microscopy 1.mp4', 'Honeycomb 2.mp4', 'Blue Dream 8.mp4', 'Rainbow Wave 3.mp4', 'Microscopy 2.mp4', 'Rainbow Wave 2.mp4', 'Rainbow Wave.mp4','dunes.mp4', 'RGB Separation 8.mp4', 'Rainbow Aura.mp4', 'Separation Assorted Colors.mp4', 'Aura Wave.mp4', 'Enchantment.mp4', 'RGB Separation 2.mp4', 'Blue Dream.mp4', 'RGB Separation 3.mp4', 'Honeycomb.mp4', 'Purple Haze.mp4', 'brain.mp4', 'Peppered 4.mp4', 'RGB Separation 4.mp4', 'Pink Haze.mp4', 'RGB Separation 5.mp4', 'RGB Separation.mp4', 'Peppered 3.mp4', 'RGB Separation 7.mp4', 'Peppered Rainbow.mp4', 'Oil Spill.mp4', 'Peppered.mp4', 'window.mp4', 'RGB Separation 6.mp4', 'Haze Assorted Colors.mp4', 'Peppered 2.mp4', 'Blue Trail.mp4', 'Blue Dream 4.mp4', 'Rainbow Aura 2.mp4', 'Aura Wave 4.mp4', 'Rainbow Aura 3.mp4', 'Blue Dream 7.mp4', 'Blue Dream 6.mp4', 'brain 2.mp4', 'Blue Dream 2.mp4', 'Aura Wave 3.mp4', 'Aura Wave 2.mp4', 'Blue Dream 3.mp4', 'kr.mp4', 'feedback loop.mp4', 'wizard.mp4', 'mocap.mp4', 'cube.mp4', 'rainbow.mp4'];
+
+	
+	
+	backgrounds = ['24270025.jpg', 'IMG_3045.JPG', '0FC73121-B3F6-4EBD-858B-E33C48D03232.jpg', 'IMG_9353.jpg', '24270024.jpg', '10470023.jpg', 'IMG_7963.jpg', 'IMG_8270.jpg', 'IMG_3325.JPG', 'IMG_3735.JPG', '0EA23873-4A0D-416F-A9E6-DEDDD5B5B619.jpg', 'IMG_1708.JPG', 'IMG_7153.JPG', '16940030.jpg', 'IMG_3054.JPG', '1D1896CE-E625-41ED-9390-BE1AA0339079.jpg', 'IMG_9356.jpg', 'IMG_3243.JPG', 'IMG_2808.JPG', 'IMG_9523.JPG', '38020029.jpg', 'IMG_2891.JPG', 'IMG_7069.JPG', '09480013.jpg', '16930016.jpg', '09480012.jpg', '0A30BB3C-0FDA-4F7F-9598-463824A8179D.jpg', '0A57E329-8A96-4745-82B9-6F049DCABD3A.jpg', 'IMG_8997.jpg', '23540021.jpg', 'IMG_9690.JPG', 'IMG_7130.JPG', '24300015.jpg', '24300003.jpg', '16930011.jpg', 'IMG_8980.jpg', 'IMG_1557.JPG', '17290013.jpg', 'IMG_9503.JPG', '9FD32A36-1FC1-4277-AFE2-3254EE6B1AF3.jpg', 'IMG_7273.JPG', 'IMG_3015.JPG', 'IMG_8961.jpg', 'IMG_7138.JPG', '23540015.jpg', '24300008.jpg', '23540017.jpg', '0B5BFC34-22AA-4475-B6E1-A91D651E37ED.jpg', 'IMG_7982.jpg', 'IMG_8290.jpg', 'IMG_3559 copy.jpg', 'IMG_9038.jpg', 'IMG_2810.JPG', 'IMG_2782.JPG', '1E1B13FF-8CF9-429A-8A32-F468A8E1EC9C.jpg', 'IMG_9211.jpg', '10460028.jpg', '24270016.jpg', '16940010.jpg', '1C78C1C0-B9F2-4317-B9AC-7F87B576F3A8.jpg', '10460003.jpg', 'IMG_4280 copy.jpg'];
+	
+	visualizerDiv.style.cursor = 'pointer';
+	visualizerDiv.addEventListener("click", function(event) {
+		if (visualizerCounter < deck.length - 1){
+			visualizerCounter += 1;
+		}else{
+			visualizerCounter = 0;
+		}
+		visualizerVideo.pause();
+		var newVisualizer = "<source src=\"" + deckDir + deck[visualizerCounter] + " \"type=\"video/mp4\">";
+		visualizerSauce.innerHTML = newVisualizer;
+		visualizerSauce.load();
+		visualizerSauce.play();
+	}, false);
+	
+	window.addEventListener('load', (event) => {
+		
+		var bg_home = document.getElementById("home_bg");
+		var bg_home_src = backgroundDir + backgrounds[Math.floor(Math.random() * backgrounds.length) + 1]; 
+		bg_home.src = bg_home_src;
+		
+		var bg_join = document.getElementById("join_bg");
+		var bg_join_src = backgroundDir + backgrounds[Math.floor(Math.random() * backgrounds.length) + 1]; 
+		bg_join.src = bg_join_src;
+	});
+	
+	// Smooth scrolling behavoir for listen button
+	const links = document.querySelectorAll(".listen_button a");
+
+	for (const link of links) {
+	  link.addEventListener("click", clickHandler);
+	}
+
+	function clickHandler(e) {
+	  e.preventDefault();
+	  const href = this.getAttribute("href");
+	  const offsetTop = document.querySelector(href).offsetTop;
+
+	  scroll({
+		top: offsetTop,
+		behavior: "smooth"
+	  });
+	}
+</script>
+</body>
+</html>
